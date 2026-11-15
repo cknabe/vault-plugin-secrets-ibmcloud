@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	gomock "github.com/golang/mock/gomock"
 	"github.com/hashicorp/vault/sdk/logical"
+	gomock "go.uber.org/mock/gomock"
 )
 
 func TestConfigRotateRootSuccess(t *testing.T) {

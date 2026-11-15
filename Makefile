@@ -51,7 +51,7 @@ fmt:
 	gofmt -w $(GOFMT_FILES)
 
 mocks:
-	mockgen -destination ${CURDIR}/mocks_test.go -source iam_helper.go -package ibmcloudsecrets
+	go run go.uber.org/mock/mockgen@v0.6.0 -destination mocks_test.go -source iam_helper.go -package ibmcloudsecrets
 
 
 .PHONY: bin default generate test vet bootstrap fmt fmtcheck

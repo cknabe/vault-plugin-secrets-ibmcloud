@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/golang/mock/gomock"
 	"github.com/hashicorp/vault/sdk/framework"
 	"github.com/hashicorp/vault/sdk/helper/strutil"
 	"github.com/hashicorp/vault/sdk/logical"
+	"go.uber.org/mock/gomock"
 )
 
 func TestStaticServiceID(t *testing.T) {

@@ -4,12 +4,12 @@ go 1.27.4
 
 require (
 	github.com/coreos/go-oidc/v3 v3.2.0
-	github.com/golang/mock v1.7.0-rc.1
 	github.com/hashicorp/errwrap v1.1.0
 	github.com/hashicorp/go-cleanhttp v0.5.2
 	github.com/hashicorp/go-hclog v1.6.3
 	github.com/hashicorp/vault/api v1.23.0
 	github.com/hashicorp/vault/sdk v0.26.0
+	go.uber.org/mock v0.6.0
 )
 
 require (
