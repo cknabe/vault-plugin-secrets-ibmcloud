@@ -319,7 +319,7 @@ func (h *ibmCloudHelper) AddServiceIDToAccessGroup(iamToken string, iamID string
 		return errwrap.Wrapf("failed creating http request: {{err}}", err)
 	}
 
-	r.Header.Set("Authorization", iamToken)
+	r.Header.Set("Authorization", "Bearer " + iamToken)
 	r.Header.Set("Content-Type", "application/json")
 	r.Header.Set("Accept", "application/json")
 	body, httpStatus, err := httpRequest(h.httpClient, r)

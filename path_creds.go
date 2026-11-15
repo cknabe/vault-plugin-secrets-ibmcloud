@@ -2,6 +2,7 @@ package ibmcloudsecrets
 
 import (
 	"context"
+	"errors"
 	"fmt"
 
 	"github.com/hashicorp/errwrap"
@@ -137,7 +138,7 @@ func (b *ibmCloudSecretBackend) secretKeyRevoke(ctx context.Context, req *logica
 	} else {
 		msg := "secret is missing service ID or API key ID internal data"
 		b.Logger().Error(msg)
-		return nil, fmt.Errorf(msg)
+		return nil, errors.New(msg)
 	}
 
 	return nil, nil
